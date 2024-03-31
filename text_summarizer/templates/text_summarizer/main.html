@@ -1,0 +1,66 @@
+{% load static %}
+<html>
+    <head>
+        <title>Text Summarizer</title>
+        <meta name="author" content="VENU GOPAL KADAMBA">
+        <meta name="Keywords" content="Django,NLP,Machine Learning,Deep Learning,Artificial Intelligence,AI,ML,DL,Web Development">
+        <meta name="description" content="A NLP algorithm based web application for Text Summarization built using Django and Python.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    </head>
+
+    <style>
+        html{
+            position: relative;
+            min-height: 100%;
+        }
+
+        body{
+            background: black url("{% static 'images/background.jpg' %}") no-repeat fixed;
+            background-size: cover;
+            margin: 0 0 100px;
+            padding: 25px;
+        }
+        .footer-container {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Add any other styles as needed */
+        .footer-container p {
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .footer-container a {
+            color: white !important;
+            margin-right: 10px;
+        }
+    </style>
+
+    <body>
+        {%  include 'text_summarizer/navbar.html' %}
+	<br><br>
+              {% block content %}
+              {% endblock %}
+              <div class="footer-container">
+                <p>
+                    Made with <span style="color:red">&#10084;</span>
+                    @Wizard_d_@_Inc.
+                </p>
+                <p style="font-size: 22px; margin-top: -5px;">
+                    <a href="" target="https://github.com/Ogachi254" class="fa fa-github"></a>
+                    <a href="" target="https://www.linkedin.com/in/dancan-ogachi-80026419b/" class="fa fa-linkedin"></a>
+                    <a href="" target="_blank" class="fa fa-instagram"></a>
+                </p>
+            </div> 
+    </body>
+</html>
